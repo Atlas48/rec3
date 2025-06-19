@@ -22,14 +22,17 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 setup(
     name = 'recutils', 
     version = '1.5',
     py_modules=['pyrec'],
-    ext_modules = [
-        Extension('recutils', ['recutils.c'],
-                  libraries = [ 'rec' ],
-                  ),
-      ],
-) 
+    ext_modules=[
+        Extension(
+            'recutils',
+            ['recutils.c'],
+            libraries=['rec'],
+        ),
+    ],
+    python_requires='>=2.7',
+)

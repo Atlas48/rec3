@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "python-recutils"
+version = "1.5"
+description = "Python bindings for GNU recutils"
+authors = ["Maninya M."]
+packages = [{ include = "pyrec" }]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=2.7"
+
+[tool.poetry.dev-dependencies]
